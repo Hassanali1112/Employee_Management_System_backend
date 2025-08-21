@@ -1,0 +1,35 @@
+{
+  "name": "emplyee-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "homepage": "https://github.com/Hassanali1112/Employee_Management_System#readme",
+  "bugs": {
+    "url": "https://github.com/Hassanali1112/Employee_Management_System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hassanali1112/Employee_Management_System.git"
+  },
+  "license": "ISC",
+  "author": "Hassan Ali",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config --experimental-json-modules src/index.js",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}
