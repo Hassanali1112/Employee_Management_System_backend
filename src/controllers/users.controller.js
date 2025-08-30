@@ -94,9 +94,35 @@ export const loginUser = asyncHandler(async (req, res) => {
 });
 
 
+// get user controller
 export const getUser = asyncHandler( async (req, res)=>{
   const user = req.user
   return res.status(200)
   .json( new ApiResponse(200, user, "User fetched successfully"))
+
+})
+
+// logout controller
+export const logoutUser = asyncHandler( async (req, res)=>{
+  
+    console.log("110 user :", req.user);
+  
+
+  const user = await User.findByIdAndUpdate(
+     req.user._id,
+     {
+       $unset: {
+         refreshToken: 1, // this removes the field from document
+       },
+     },
+     {
+       new: true,
+     }
+   );
+
+   return res.status(200)
+   .clearCookie("accessToken", options)
+   .clearCookie("refreshToken", options)
+   .json(new ApiResponse(200, {},"User logged out"))
 
 })
