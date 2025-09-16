@@ -19,13 +19,4 @@ const addEmployeeSchema = new Schema(
 
 export const AddEmployee = mongoose.model("AddEmployee", addEmployeeSchema);
 
-// fullName,
-//     cnic,
-//     email,
-//     contactNo,
-//     dob,
-//     qualification,
-//     position,
-//     joiningDate,
-//     salary,
-//     address,
+
